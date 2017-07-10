@@ -12,6 +12,10 @@ module.exports = class Competition {
     this.votes[id] += 1;
   }
 
+  getVoteCount() {
+    return this.votes;
+  }
+
   getVoteShare() {
     const totalVotes = _.reduce(this.votes, (sum, vote) => sum + vote, 0);
     if (totalVotes === 0) {

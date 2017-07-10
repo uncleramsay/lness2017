@@ -36,16 +36,17 @@ body {
 }
 
 .contestants {
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 0;
+  top: 0;
 }
 
 .contestant {
-  position: absolute;
   bottom: 0;
+  position: absolute;
+  transition: top 1s;
 }
 
 #evan {
@@ -54,6 +55,37 @@ body {
 
 #mike {
   right: 0;
+}
+
+#evan:after,
+#mike:before {
+  bottom: 0;
+  box-shadow: 0 0 20px white;
+  content: ' ';
+  display: inline-block;
+  position: absolute;
+  top: 227px; /* half height */
+  width: 75px;
+}
+
+#evan:after {
+  background: linear-gradient(red, yellow);
+  margin-right: -100px;
+  right: 0;
+}
+
+#mike:before {
+  background: linear-gradient(blue, pink);
+  margin-left: -100px;
+  left: 0;
+}
+
+#evan.winning:after {
+  box-shadow: 0 0 100px yellow;
+}
+
+#mike.winning:before {
+  box-shadow: 0 0 100px pink;
 }
 
 .contestant img {
