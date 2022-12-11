@@ -4,7 +4,7 @@
   "main": "server/index.js",
   "author": "Dale Caffull",
   "dependencies": {
-    "express": "^4.15.3",
+    "express": "^4.17.3",
     "lodash": "^4.17.4"
   }
 }
